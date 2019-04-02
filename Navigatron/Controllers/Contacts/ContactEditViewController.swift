@@ -24,4 +24,9 @@ class ContactEditViewController: UIViewController {
         contactLabel.text = "Editing \(selectedContact ?? "This Contact")"
         hireButton.setTitle("Hire \(selectedContact ?? "This Contact")!", for: .normal)
     }
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }

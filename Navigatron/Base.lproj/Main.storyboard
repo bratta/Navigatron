@@ -136,8 +136,7 @@
                     <navigationItem key="navigationItem" title="Edit Contact" id="LZr-8k-cxo">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="mkU-Ex-Cfc">
                             <connections>
-                                <action selector="saveContact:" destination="7QC-7V-9ak" id="JTy-Z1-XzD"/>
-                                <segue destination="7QC-7V-9ak" kind="unwind" identifier="GotoSaveContact" unwindAction="saveContactWithSegue:" id="tlo-cI-kwC"/>
+                                <action selector="saveButtonPressed:" destination="Swl-ow-n7D" id="qAY-O4-g9a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
