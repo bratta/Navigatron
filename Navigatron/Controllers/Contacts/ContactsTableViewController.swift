@@ -11,7 +11,7 @@ import UIKit
 class ContactsTableViewController: UITableViewController {
 
     private let contacts = ["David Charleston", "Jonathan Phaedrus", "Megan Tarash", "Missouri Williams", "Edmund Sense"]
-    var selectedContact : String?
+    var selectedContact: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
