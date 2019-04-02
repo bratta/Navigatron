@@ -1,6 +1,6 @@
  # Navigatron
 
-This is an iOS project written using Swift 4 to illustrate Tab Bar and Navigation Controller interactions, providing details on how to navigate betwen the two while providing proper navigation history.
+This is an iOS project written using Swift 5 to illustrate Tab Bar and Navigation Controller interactions, providing details on how to navigate betwen the two while providing proper navigation history.
 
 This is provided for demonstration purposes only and should not be used in production code. As such, no real functionality outside of the base navigation has been provided.
 
