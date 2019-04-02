@@ -17,6 +17,31 @@ class ContactsTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contacts.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsCell", for: indexPath)
+        cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.text = contacts[indexPath.row]
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedContact = contacts[indexPath.row]
+        performSegue(withIdentifier: "GoToContact", sender: self)
+    }
+
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToContact" {
+            let contactViewController = segue.destination as! ContactViewController
+            contactViewController.selectedContact = selectedContact ?? "Unknown Contact"
+        }
+    }
+    
     @IBAction func hireContact(segue: UIStoryboardSegue) {
         var employee: String = ""
         
@@ -48,31 +73,6 @@ class ContactsTableViewController: UITableViewController {
             if let employeesTableViewController = employeesNavigationController.topViewController as? EmployeesTableViewController {
                 employeesTableViewController.selectedEmployee = employee
             }
-        }
-    }
-
-    // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsCell", for: indexPath)
-        cell.textLabel?.textColor = UIColor.white
-        cell.textLabel?.text = contacts[indexPath.row]
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedContact = contacts[indexPath.row]
-        performSegue(withIdentifier: "GoToContact", sender: self)
-    }
-
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToContact" {
-            let contactViewController = segue.destination as! ContactViewController
-            contactViewController.selectedContact = selectedContact ?? "Unknown Contact"
         }
     }
 }
