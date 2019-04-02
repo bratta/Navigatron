@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229ED0842252B4D600A7ED1D /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229ED0832252B4D600A7ED1D /* ContactsTableViewController.swift */; };
+		229ED0862253AD9E00A7ED1D /* EmployeesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229ED0852253AD9E00A7ED1D /* EmployeesTableViewController.swift */; };
 		22FEB2B3224BC0DC005F8AB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEB2B2224BC0DC005F8AB6 /* AppDelegate.swift */; };
-		22FEB2B5224BC0DC005F8AB6 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEB2B4224BC0DC005F8AB6 /* ContactsViewController.swift */; };
 		22FEB2B8224BC0DC005F8AB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FEB2B6224BC0DC005F8AB6 /* Main.storyboard */; };
 		22FEB2BA224BC0DF005F8AB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22FEB2B9224BC0DF005F8AB6 /* Assets.xcassets */; };
 		22FEB2BD224BC0DF005F8AB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FEB2BB224BC0DF005F8AB6 /* LaunchScreen.storyboard */; };
-		22FEB2C5224BC66E005F8AB6 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEB2C4224BC66E005F8AB6 /* EmployeesViewController.swift */; };
 		22FEB2C7224BD4AF005F8AB6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEB2C6224BD4AF005F8AB6 /* ContactViewController.swift */; };
 		22FEB2C9224BD4BD005F8AB6 /* ContactEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEB2C8224BD4BD005F8AB6 /* ContactEditViewController.swift */; };
 		22FEB2CB224BD4CC005F8AB6 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEB2CA224BD4CC005F8AB6 /* EmployeeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		229ED0832252B4D600A7ED1D /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		229ED0852253AD9E00A7ED1D /* EmployeesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewController.swift; sourceTree = "<group>"; };
 		22FEB2AF224BC0DC005F8AB6 /* Navigatron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigatron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FEB2B2224BC0DC005F8AB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22FEB2B4224BC0DC005F8AB6 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		22FEB2B7224BC0DC005F8AB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22FEB2B9224BC0DF005F8AB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22FEB2BC224BC0DF005F8AB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22FEB2BE224BC0DF005F8AB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22FEB2C4224BC66E005F8AB6 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
 		22FEB2C6224BD4AF005F8AB6 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		22FEB2C8224BD4BD005F8AB6 /* ContactEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEditViewController.swift; sourceTree = "<group>"; };
 		22FEB2CA224BD4CC005F8AB6 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		22FEB2CC224BD4D2005F8AB6 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				22FEB2B4224BC0DC005F8AB6 /* ContactsViewController.swift */,
+				229ED0832252B4D600A7ED1D /* ContactsTableViewController.swift */,
 				22FEB2C6224BD4AF005F8AB6 /* ContactViewController.swift */,
 				22FEB2C8224BD4BD005F8AB6 /* ContactEditViewController.swift */,
 			);
@@ -85,7 +85,7 @@
 		22FEB2CD224BD4DB005F8AB6 /* Employees */ = {
 			isa = PBXGroup;
 			children = (
-				22FEB2C4224BC66E005F8AB6 /* EmployeesViewController.swift */,
+				229ED0852253AD9E00A7ED1D /* EmployeesTableViewController.swift */,
 				22FEB2CA224BD4CC005F8AB6 /* EmployeeViewController.swift */,
 			);
 			path = Employees;
@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					22FEB2AE224BC0DC005F8AB6 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -172,11 +173,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22FEB2CB224BD4CC005F8AB6 /* EmployeeViewController.swift in Sources */,
-				22FEB2C5224BC66E005F8AB6 /* EmployeesViewController.swift in Sources */,
+				229ED0862253AD9E00A7ED1D /* EmployeesTableViewController.swift in Sources */,
 				22FEB2C7224BD4AF005F8AB6 /* ContactViewController.swift in Sources */,
-				22FEB2B5224BC0DC005F8AB6 /* ContactsViewController.swift in Sources */,
 				22FEB2C9224BD4BD005F8AB6 /* ContactEditViewController.swift in Sources */,
 				22FEB2B3224BC0DC005F8AB6 /* AppDelegate.swift in Sources */,
+				229ED0842252B4D600A7ED1D /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Navigatron/Info.plist;
@@ -331,7 +333,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.your.name.here.Navigatron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -340,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Navigatron/Info.plist;
@@ -349,7 +353,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.your.name.here.Navigatron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

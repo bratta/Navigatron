@@ -1,64 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xnx-6w-u6Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xnx-6w-u6Q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Contacts-->
+        <scene sceneID="l3q-Xs-zWq">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Contacts View Controller" customClass="ContactsViewController" customModule="Navigatron" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Contacts">
+                <tableViewController id="0kk-Do-sjO" customClass="ContactsTableViewController" customModule="Navigatron" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Md1-Gv-IKZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact List View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQZ-fD-U8t">
-                                <rect key="frame" x="0.0" y="321.5" width="375" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="67M-q8-AhX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvc-Xd-kU3">
-                                <rect key="frame" x="140" y="353" width="95" height="30"/>
-                                <color key="backgroundColor" red="0.92528557779999998" green="0.93735855820000002" blue="0.94531041380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="T1K-85-EV3"/>
-                                    <constraint firstAttribute="height" constant="30" id="aAk-CR-n0o"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" title="Contact #1">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2Jt-1C-2Fz" kind="show" identifier="GotoContact" id="BCk-fg-AcN"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.20245087149999999" green="0.5959032178" blue="0.85973197219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Lvc-Xd-kU3" firstAttribute="top" secondItem="wQZ-fD-U8t" secondAttribute="bottom" constant="7.5" id="7M4-ry-Oju"/>
-                            <constraint firstItem="wQZ-fD-U8t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bhh-Xd-nV9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wQZ-fD-U8t" secondAttribute="trailing" id="aqM-y2-SaB"/>
-                            <constraint firstItem="Lvc-Xd-kU3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hYx-fb-fac"/>
-                            <constraint firstItem="wQZ-fD-U8t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x9i-IO-SOk"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Contacts" id="n1o-oT-OSx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactsCell" id="Dka-Kr-la9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dka-Kr-la9" id="O2R-cL-ZgM">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.20245087149999999" green="0.5959032178" blue="0.85973197219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.20245087149999999" green="0.5959032178" blue="0.85973197219999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0kk-Do-sjO" id="A68-Jf-fyt"/>
+                            <outlet property="delegate" destination="0kk-Do-sjO" id="h38-oV-OBa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Contacts" id="qzO-as-0OR"/>
+                    <connections>
+                        <segue destination="2Jt-1C-2Fz" kind="show" identifier="GoToContact" id="3np-mw-otn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTi-hr-1qp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008.8" y="-190.25487256371815"/>
+            <point key="canvasLocation" x="1978" y="-190"/>
         </scene>
         <!--Contact-->
         <scene sceneID="Tqf-NV-b4v">
@@ -89,10 +76,14 @@
                     <navigationItem key="navigationItem" title="Contact" id="3g0-Gc-MDA">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="zSQ-gZ-hTn">
                             <connections>
-                                <segue destination="Swl-ow-n7D" kind="show" identifier="GotoEditContact" id="wxY-ZX-RfM"/>
+                                <action selector="editButtonPressed:" destination="2Jt-1C-2Fz" id="Eg9-Ug-DnP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contactLabel" destination="9TM-UV-Udo" id="dUh-Kt-Mn5"/>
+                        <segue destination="Swl-ow-n7D" kind="show" identifier="GoToEditContact" id="F5V-hY-EM9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGi-Cl-d7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,7 +97,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Edit Form" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdb-Lu-Kbv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editing This Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdb-Lu-Kbv">
                                 <rect key="frame" x="0.0" y="321.5" width="375" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="y04-5h-dVq"/>
@@ -116,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5y-qX-6Mf">
-                                <rect key="frame" x="109.5" y="353" width="156" height="38"/>
+                                <rect key="frame" x="115.5" y="353" width="144" height="38"/>
                                 <color key="backgroundColor" red="0.92528557779999998" green="0.93735855820000002" blue="0.94531041380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="95d-gg-y1h"/>
@@ -124,7 +115,7 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" title="Hire This Employee!">
+                                <state key="normal" title="Hire This Contact!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -150,61 +141,51 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contactLabel" destination="Fdb-Lu-Kbv" id="5be-A0-5b1"/>
+                        <outlet property="hireButton" destination="G5y-qX-6Mf" id="f0H-CT-6La"/>
+                        <outlet property="saveButton" destination="mkU-Ex-Cfc" id="m3l-v6-Pr7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQJ-6g-pgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7QC-7V-9ak" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3543" y="-190"/>
         </scene>
-        <!--Employees View Controller-->
-        <scene sceneID="JHo-jf-6HW">
+        <!--Employees-->
+        <scene sceneID="ovv-L7-Ae4">
             <objects>
-                <viewController id="La9-7Y-9jn" userLabel="Employees View Controller" customClass="EmployeesViewController" customModule="Navigatron" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lbe-eW-Suy">
+                <tableViewController id="7FL-xH-HzE" customClass="EmployeesTableViewController" customModule="Navigatron" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xhq-i4-5AF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee List View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h36-cJ-Kyo">
-                                <rect key="frame" x="0.0" y="321.5" width="375" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="S9Z-Uv-QK1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzC-Fl-zbh">
-                                <rect key="frame" x="134" y="353" width="107" height="38"/>
-                                <color key="backgroundColor" red="0.92528557779999998" green="0.93735855820000002" blue="0.94531041380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="SLR-a6-2gH"/>
-                                    <constraint firstAttribute="height" constant="38" id="ioE-ea-RvJ"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" title="Employee #1">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="5mV-oe-tSi" kind="show" identifier="GotoEmployee" id="BXp-tB-GvM"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.5589057207" green="0.26919096710000001" blue="0.67751264570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="yzC-Fl-zbh" firstAttribute="top" secondItem="h36-cJ-Kyo" secondAttribute="bottom" constant="7.5" id="4z3-bf-9E7"/>
-                            <constraint firstItem="p2R-LB-ZWv" firstAttribute="trailing" secondItem="h36-cJ-Kyo" secondAttribute="trailing" id="KHz-WI-rSv"/>
-                            <constraint firstItem="yzC-Fl-zbh" firstAttribute="centerX" secondItem="Lbe-eW-Suy" secondAttribute="centerX" id="WF8-ay-0qD"/>
-                            <constraint firstItem="h36-cJ-Kyo" firstAttribute="centerY" secondItem="Lbe-eW-Suy" secondAttribute="centerY" id="ZtM-uF-Daz"/>
-                            <constraint firstItem="h36-cJ-Kyo" firstAttribute="leading" secondItem="p2R-LB-ZWv" secondAttribute="leading" id="qaH-c8-6iZ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="p2R-LB-ZWv"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Employees" id="Qis-0k-291"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LcL-2K-jhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmployeeCell" id="mqv-HO-ZjX">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mqv-HO-ZjX" id="iUx-oC-ANS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.5589057207" green="0.26919096710000001" blue="0.67751264570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7FL-xH-HzE" id="41i-0X-JBF"/>
+                            <outlet property="delegate" destination="7FL-xH-HzE" id="CeB-J1-Ddx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Employees" id="cqd-YN-VHo"/>
+                    <connections>
+                        <segue destination="5mV-oe-tSi" kind="show" identifier="GoToEmployee" id="jH1-y9-EdP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w70-fn-5oS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2009" y="549"/>
+            <point key="canvasLocation" x="1977" y="549"/>
         </scene>
         <!--Employee-->
         <scene sceneID="XoV-7y-CLW">
@@ -232,6 +213,9 @@
                         <viewLayoutGuide key="safeArea" id="6dh-ux-xBi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Employee" id="FHc-oh-4SR"/>
+                    <connections>
+                        <outlet property="employeeLabel" destination="NdX-jb-YXp" id="wnX-7i-J20"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Owm-ZS-zMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -268,7 +252,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PR1-nU-m8V"/>
+                        <segue destination="0kk-Do-sjO" kind="relationship" relationship="rootViewController" id="Isb-q4-IX1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aI-HU-tb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -287,7 +271,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="La9-7Y-9jn" kind="relationship" relationship="rootViewController" id="huM-rf-rX3"/>
+                        <segue destination="7FL-xH-HzE" kind="relationship" relationship="rootViewController" id="wDZ-3Z-jdJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ug-6I-QtO" userLabel="First Responder" sceneMemberID="firstResponder"/>

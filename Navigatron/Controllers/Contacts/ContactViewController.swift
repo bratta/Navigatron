@@ -9,10 +9,28 @@
 import UIKit
 
 class ContactViewController: UIViewController {
+    
+    var selectedContact: String?
+    @IBOutlet weak var contactLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func saveContact(segue: UIStoryboardSegue) {
+    override func viewWillAppear(_ animated: Bool) {
+        if let contact = selectedContact {
+            contactLabel.text = contact
+        }
+    }
+    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "GoToEditContact", sender: self)
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToEditContact" {
+            let contactEditViewController = segue.destination as! ContactEditViewController
+            contactEditViewController.selectedContact = selectedContact
+        }
     }
 }
