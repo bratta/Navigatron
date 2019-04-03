@@ -8,7 +8,7 @@ This repository is provided for illustration on the [Phase 2 Blog](http://phase2
 
 ## Getting Started
 
-Clone or download this application and open up the project file in Xcode. You will need Xcode 10.1. Your mileage may vary for other versions.
+Clone or download this application and open up the project file in Xcode. You will need Xcode 10.2. Your mileage may vary for other versions.
 
 # Authors
 
